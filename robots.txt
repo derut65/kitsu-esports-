@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kitsuesports.space/sitemap.xml
+Host: https://kitsuesports.space

@@ -2,103 +2,108 @@
 
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen.svg)](SECURITY.md)
 [![Game](https://img.shields.io/badge/Counter--Strike%202-Esports-FF4A1C.svg)](https://t.me/kitsues)
-[![License](https://img.shields.io/badge/License-MIT-black.svg)](#лицензия--license)
-[![Status](https://img.shields.io/badge/Status-Active-success.svg)](https://derut65.github.io/kitsu-esports-/)
+[![Domain](https://img.shields.io/badge/Domain-kitsuesports.space-FF4A1C.svg)](https://kitsuesports.space/)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black.svg)](https://vercel.com/)
+[![Cloudflare](https://img.shields.io/badge/CDN-Cloudflare-F38020.svg)](https://cloudflare.com/)
 
 Официальный веб-сайт и бренд-портал киберспортивной организации **KITSU Esports** по Counter-Strike 2.  
-Official website and brand portal of the **KITSU Esports** Counter-Strike 2 organization.
+Домен проекта: [kitsuesports.space](https://kitsuesports.space/)
 
 ---
 
 ## 🇷🇺 О проекте
 
-**KITSU Esports** — молодая и амбициозная киберспортивная организация по Counter-Strike. Портал разработан в соответствии с современными стандартами веб-разработки и кибербезопасности:
-- **Состав команды**: карточки игроков основного состава (`y9ko`, `hays0n`, `st1n3x`, `qyurix`, `Famlikus`) и запасного (`a1eks`).
-- **Матчи и расписание**: динамический трекер предстоящих и прошедших встреч с автоматическим определением времени по МСК.
-- **Новости**: лента анонсов, трансферов и турнирных новостей.
-- **Пресс-кит (Press Kit)**: фирменная символика, экспорт векторных (SVG) и растровых (PNG высокого разрешения) логотипов прямо из браузера, интерактивная палитра цветов в 1 клик (`#FF4A1C`, `#000000`, `#131313`, `#FFFFFF`).
-- **Двуязычность**: мгновенное переключение RU / EN с сохранением выбора пользователя.
-- **Быстродействие**: ультра-легковесный монолитный HTML5/CSS3/Vanilla JS без внешних тяжёлых фреймворков.
+**KITSU Esports** — российская киберспортивная организация по Counter-Strike 2, основанная 20 сентября 2026 года.
+- **Ростер CS2**:
+  - 💥 `y9ko` — Entry Fragger (Энтри-фрагер)
+  - 🧠 `hays0n` — In-Game Leader (Капитан / Игровой лидер)
+  - 🎯 `st1n3x` — Support (Саппорт)
+  - 🛡️ `qyurix` — Anchor (Опорник)
+  - ⚡ `Famlikus` — AWPer (AWP-снайпер)
+  - 🔄 `a1eks` — Substitute (Запасной игрок)
+- **Матчи и расписание**: динамический трекер предстоящих и завершённых игр с определением времени по МСК.
+- **Новости**: оперативная лента анонсов, трансферов и турниров.
+- **Пресс-кит (Press Kit)**: фирменная символика, экспорт векторных (SVG) и растровых (PNG 1800px) логотипов, интерактивная палитра цветов в 1 клик (`#FF4A1C`, `#000000`, `#131313`, `#FFFFFF`).
+- **Двуязычность**: мгновенное переключение RU / EN с сохранением выбора пользователя в `localStorage`.
 
 ---
 
-## 🛡️ Безопасность / Security
+## 🔍 Оптимизация для Google и поисковых систем (SEO)
 
-Проект защищён в соответствии с рекомендациями OWASP:
+Портал подготовлен для моментального распознавания поисковыми роботами Google, Yandex и Bing как официальная киберспортивная организация:
 
-1. **Content Security Policy (CSP)**:
-   - Ограничение источников скриптов и стилей (`'self'`, `'unsafe-inline'`, Google Fonts).
-   - Запрет несанкционированных сетевых запросов (`connect-src 'self'`).
-   - Блокировка плагинов и опасных объектов (`object-src 'none'`).
-   - Защита от манипуляций базовым URL (`base-uri 'self'`).
-   - Принудительное обновление до HTTPS (`upgrade-insecure-requests`).
-2. **Защита от кликджекинга (Clickjacking)**:
-   - Заголовок `X-Frame-Options: DENY`.
-   - Защитный скрипт frame-busting (блокировка отображения страницы во фреймах сторонних сайтов).
-3. **Защита от обратного табнаббинга (Reverse Tabnabbing)**:
-   - Все внешние ссылки содержат обязательные атрибуты `rel="noopener noreferrer" target="_blank"`.
-4. **Защита от MIME-sniffing**:
-   - `X-Content-Type-Options: nosniff`.
-5. **Политика конфиденциальности реферера**:
-   - `Referrer-Policy: strict-origin-when-cross-origin`.
-6. **Ограничение аппаратных API (Permissions Policy)**:
-   - Отключён доступ к камере, микрофону, геолокации, платежам и датчикам движения.
-7. **Санитизация DOM и маршрутизации**:
-   - Очистка хеша URL (`location.hash`) от спецсимволов для предотвращения DOM-инъекций.
-   - Валидация входных данных языка (`setLang`).
-   - Безопасная очистка `Blob URL` (`URL.revokeObjectURL`) при экспорте логотипов.
-
-Подробная информация о политике безопасности и контакты для сообщений об уязвимостях доступны в [SECURITY.md](SECURITY.md).
+1. **Разметка Schema.org JSON-LD (Knowledge Graph)**:
+   - Внедрена семантическая сущность `["SportsTeam", "Organization"]`.
+   - Описаны состав игроков (`athlete`), их роли (IGL, Entry, AWPer, Anchor, Support), дата основания команды (20 сентября 2026 г.) и спортивная дисциплина (`Counter-Strike 2`).
+   - Связаны официальные социальные сети через `sameAs` (Telegram, VK, Steam, YouTube, GitHub), что необходимо Google для формирования официального блока знаний (Knowledge Panel).
+2. **Open Graph & Twitter Cards**:
+   - Настроены превью сгенерированным баннером `og-image.png` (1200x630) для привлекательного отображения ссылок в Telegram, VK, Discord, Twitter и поисковиках.
+3. **Карта сайта (Sitemap) и Robots**:
+   - `sitemap.xml`: проиндексированы все разделы и языковые версии.
+   - `robots.txt`: открыт доступ поисковым ботам, указан адрес sitemap и канонический хост `https://kitsuesports.space`.
+4. **Канонический URL**:
+   - Указан `<link rel="canonical" href="https://kitsuesports.space/">`.
 
 ---
 
-## 📂 Структура репозитория
+## 🛡️ Безопасность и заголовки (Security)
+
+- **Content Security Policy (CSP)**: запрет внедрения посторонних скриптов, защита от XSS.
+- **Защита от кликджекинга**: заголовок `X-Frame-Options: DENY`, `frame-ancestors 'none'` и скрипт frame-busting.
+- **Защита от Reverse Tabnabbing**: атрибуты `rel="noopener noreferrer"` на всех внешних ссылках.
+- **HSTS & Permissions Policy**: принудительный HTTPS и отключение неиспользуемых браузерных API.
+- Подробности в файле [SECURITY.md](SECURITY.md).
+
+---
+
+## 🚀 Развёртывание: Vercel + Cloudflare
+
+### 1. Подключение к Vercel
+1. Перейдите на [vercel.com](https://vercel.com) и импортируйте репозиторий `derut65/kitsu-esports-`.
+2. Framework Preset: **Other** (чистый HTML/JS/CSS).
+3. Нажмите **Deploy**. Проект автоматически использует файл конфигурации `vercel.json`.
+
+### 2. Привязка домена `kitsuesports.space` в Cloudflare и Vercel
+1. В панели **Vercel** ➔ проект ➔ **Settings** ➔ **Domains**:
+   - Добавьте `kitsuesports.space` и `www.kitsuesports.space`.
+2. В панели **Cloudflare** ➔ DNS:
+   - Создайте запись **A**: `name: @`, `IPv4: 76.76.21.21`, Proxy status: **Proxied (оранжевое облако)**.
+   - Создайте запись **CNAME**: `name: www`, `Target: cname.vercel-dns.com` (или `@`), Proxy status: **Proxied**.
+3. В панели **Cloudflare** ➔ **SSL/TLS**:
+   - Установите режим шифрования: **Full (strict)** *(важно для предотвращения бесконечного редиректа!)*.
+
+### 3. Регистрация в Google Search Console
+1. Откройте [Google Search Console](https://search.google.com/search-console).
+2. Добавьте ресурс: домен `kitsuesports.space`.
+3. Подтвердите владение через DNS-запись TXT в Cloudflare (или HTML-тег).
+4. В разделе **Sitemaps (Файлы Sitemap)** отправьте: `https://kitsuesports.space/sitemap.xml`.
+5. Запросите индексирование главной страницы `https://kitsuesports.space/`.
+
+---
+
+## 📂 Структура проекта
 
 ```text
-├── index.html        # Основной веб-портал с полным функционалом и защитой
-├── SECURITY.md       # Политика безопасности и контактная информация
+├── index.html        # Главный файл сайта с SEO-разметкой и CSP
+├── vercel.json       # Конфигурация заголовков и кэширования для Vercel
+├── sitemap.xml       # Карта сайта для Google и Yandex
+├── robots.txt        # Инструкции для поисковых роботов
+├── logo.svg          # Официальный векторный логотип
+├── favicon.svg       # Иконка сайта (Favicon)
+├── og-image.png      # Баннер предпросмотра соцсетей (1200x630)
+├── SECURITY.md       # Политика безопасности
 ├── README.md         # Документация проекта
-├── robots.txt        # Правила индексации для поисковых систем
 └── .gitignore        # Список исключений Git
 ```
 
 ---
 
-## 🚀 Запуск и публикация
-
-### Локальный просмотр
-Достаточно просто открыть файл `index.html` в любом современном веб-браузере:
-```bash
-# Windows PowerShell
-Start-Process index.html
-```
-Или использовать локальный веб-сервер:
-```bash
-npx serve .
-# или Python:
-python -m http.server 8000
-```
-
-### Публикация на GitHub Pages
-1. Перейдите в настройки репозитория: **Settings** -> **Pages**.
-2. В секции **Build and deployment** выберите:
-   - **Source**: `Deploy from a branch`
-   - **Branch**: `main`, папка `/ (root)`
-3. Нажмите **Save**. Сайт будет автоматически доступен по адресу:  
-   👉 `https://derut65.github.io/kitsu-esports-/`
-
----
-
 ## 🦊 Контакты / Contacts
 
+- **Официальный сайт**: [kitsuesports.space](https://kitsuesports.space)
 - **Telegram-канал**: [@kitsues](https://t.me/kitsues)
 - **VK**: [vk.com/kitsues](https://vk.com/kitsues)
 - **Email**: [kitsuesports@gmail.com](mailto:kitsuesports@gmail.com)
 - **Менеджер Telegram**: [@kitsuadmin](https://t.me/kitsuadmin)
+- **YouTube**: [@kitsu-esports](https://youtube.com/@kitsu-esports)
 - **Steam Community**: [steamcommunity.com/groups/kitsuesports](https://steamcommunity.com/groups/kitsuesports)
-
----
-
-## 📄 Лицензия / License
-
-© 2026 KITSU Esports. Все права защищены / All rights reserved.
