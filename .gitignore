@@ -1,0 +1,39 @@
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Temporary & Log Files
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Environment & Sensitive Files
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.pfx
+secrets.json
+config.local.*
+
+# Build & Dependency Directories
+node_modules/
+dist/
+build/
+.cache/
