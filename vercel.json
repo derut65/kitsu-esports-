@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/(logo.svg|favicon.svg|og-image.png|puff.png|blitz.png)",
+      "source": "/(logo.svg|favicon.svg|og-image.png|puff.png|blitz.png|gladkovka.png)",
       "headers": [
         {
           "key": "Cache-Control",
